@@ -12,23 +12,23 @@ const Sidebar = () => {
     as='nav'
     pos={'fixed'}
     height={'100vh'}
-    width={'250px'}
+    width={'270px'}
     left={0}
     flexDirection={'column'}
     justifyContent={'space-between'}
     p={6}
     >
-    <HStack justifyContent={'center'}>
+    <HStack justifyContent={'center'} mt={4}>
     <IconButton
     fontSize={30}
     variant={'ghost'}
-    colorScheme='blue'
+    colorScheme='twitter'
     aria-label='Search database'
     isRound='true'
     icon={<AiOutlineTwitter />}
     />
     </HStack>
-    <Flex flexDirection={'column'} mt={16}>
+    <Flex flexDirection={'column'} mt={10}>
         <NavItem icon={AiFillHome} title='Home' />
         <NavItem icon={FaHashtag} title='Explore' />
         <NavItem icon={AiFillSetting} title='Settings' />
