@@ -1,5 +1,5 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom";
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/Sidebar/Sidebar'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Home from './pages/Home'

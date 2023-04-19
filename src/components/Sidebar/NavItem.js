@@ -7,7 +7,7 @@ const NavItem = ({icon,title,path}) => {
     <Menu placement='right'>
             <Link
             w={'fit-content'}
-            p={3}
+            p={2.5}
             // ml={8}
             borderRadius={30}
             _hover={{backgroundColor:'#f0f1f7'}}
@@ -15,7 +15,7 @@ const NavItem = ({icon,title,path}) => {
             to={`/${path}`}
             >
                 <MenuButton>
-                    <Flex mr={4} ml={4} alignItems='center'>
+                    <Flex mr={4} ml={2} alignItems='center'>
                         <Icon as={icon} boxSize={8} color={'black'}/>
                         <Text ml={4} fontSize={'xl'} color={'black'}>{title}</Text>
                     </Flex>

@@ -13,7 +13,8 @@ const Sidebar = () => {
     pos={'fixed'}
     height={'100vh'}
     width={'270px'}
-    left={0}
+    ml={'100px'}
+    zIndex={1}
     flexDirection={'column'}
     justifyContent={'space-between'}
     p={6}
