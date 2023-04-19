@@ -2,19 +2,16 @@ import {
   Avatar,
   Card,
   CardBody,
-  CardFooter,
-  CardHeader,
   Flex,
   HStack,
   IconButton,
   Image,
-  Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { BiComment } from "react-icons/bi";
-import { AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai";
+import { AiFillHeart, AiOutlineRetweet } from "react-icons/ai";
 import { IoMdStats } from "react-icons/io";
 
 const TweetCard = ({
@@ -39,7 +36,7 @@ const TweetCard = ({
           <Avatar
             size="md"
             name="Ryan Florence"
-            src="https://bit.ly/ryan-florence"
+            src={profile_pic}
           />
           <VStack alignItems={"flex-start"}>
             <HStack>
@@ -60,31 +57,35 @@ const TweetCard = ({
             >
               <IconButton
                 isRound="true"
-                variant={"outline"}
+                variant={"ghost"}
                 colorScheme="gray"
                 aria-label="comments"
                 icon={<BiComment />}
+                _hover={{ backgroundColor: "#e4eef5", color: "#1D9BF0" }}
               />
               <IconButton
                 isRound="true"
-                variant={"outline"}
+                variant={"ghost"}
                 colorScheme="gray"
                 aria-label="likes"
-                icon={<AiOutlineHeart />}
+                icon={<AiFillHeart />}
+                _hover={{ backgroundColor: "#F9E3EB", color: "#F91680" }}
               />
               <IconButton
                 isRound="true"
-                variant={"outline"}
+                variant={"ghost"}
                 colorScheme="gray"
                 aria-label="retweets"
                 icon={<AiOutlineRetweet />}
+                _hover={{ backgroundColor: "#E3F1EB", color: "#03BA7D" }}
               />
               <IconButton
                 isRound="true"
-                variant={"outline"}
+                variant={"ghost"}
                 colorScheme="gray"
                 aria-label="views"
                 icon={<IoMdStats />}
+                _hover={{ backgroundColor: "#e4eef5", color: "#1D9BF0" }}
               />
             </Flex>
           </VStack>
