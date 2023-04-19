@@ -1,14 +1,32 @@
-import { Box, Flex, HStack, IconButton, Spacer, VStack } from '@chakra-ui/react'
-import React from 'react'
-import {AiOutlineTwitter,AiFillSetting,AiFillHome} from 'react-icons/ai'
-import {BsBookmarks,BsBell,BsEnvelopeFill,BsCardList} from 'react-icons/bs'
-import {CgProfile} from 'react-icons/cg'
-import {FaHashtag} from 'react-icons/fa'
-import NavItem from './NavItem'
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Spacer,
+  VStack,
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { AiOutlineTwitter, AiFillSetting, AiFillHome } from "react-icons/ai";
+import {
+  BsBookmarks,
+  BsBell,
+  BsEnvelopeFill,
+  BsCardList,
+} from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
+import { FaHashtag } from "react-icons/fa";
+import NavItem from "./NavItem";
 
 const Sidebar = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("loggedIn"));
+    setLoggedIn(data);
+  }, []);
   return (
-    <Flex
+    <>
+    {loggedIn&&<Flex
     as='nav'
     pos={'fixed'}
     height={'100vh'}
@@ -41,7 +59,9 @@ const Sidebar = () => {
     </Flex>
     <Spacer/>
     </Flex>
+    }
+    </>
   )
 }
 
-export default Sidebar
+export default Sidebar;
