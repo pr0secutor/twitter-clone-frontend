@@ -16,6 +16,7 @@ const WhoToFollowCard = () => {
       boxShadow={"none"}
       borderRadius={16}
       backgroundColor={"#F7F9F9"}
+      mt={3}
       pt={0}
       pb={4}
     >
@@ -58,7 +59,7 @@ const Item = ({ profile_pic, name, twitter_handle }) => {
         transition: "0.3s",
       }}
     >
-      <Flex flexDirection={'row'}>
+      <Flex flexDirection={'row'} alignItems={'center'}>
         <Avatar size={"md"} src={profile_pic} />
         <VStack alignItems={"flex-start"} ml={3}>
           <Text as="b" fontSize={"sm"}>

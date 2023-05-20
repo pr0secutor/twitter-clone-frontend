@@ -3,7 +3,14 @@ import React from "react";
 
 const CurrentEventsCard = () => {
   return (
-    <Card boxShadow={"none"} borderRadius={'16px'} backgroundColor={"#F7F9F9"} pt={0} pb={4}>
+    <Card
+      boxShadow={"none"}
+      borderRadius={"16px"}
+      backgroundColor={"#F7F9F9"}
+      mt={3}
+      pt={0}
+      pb={4}
+    >
       <Heading size={"md"} p={5}>
         What's happening
       </Heading>

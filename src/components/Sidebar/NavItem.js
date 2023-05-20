@@ -2,7 +2,7 @@ import { Flex, Icon, Link, Menu, MenuButton, Text } from '@chakra-ui/react'
 import React from 'react'
 import {Link as DOMLink} from 'react-router-dom' 
 
-const NavItem = ({icon,title,path}) => {
+const NavItem = ({icon,title,path,isSmaller}) => {
   return (
     <Menu placement='right'>
             <Link
@@ -17,7 +17,7 @@ const NavItem = ({icon,title,path}) => {
                 <MenuButton>
                     <Flex mr={4} ml={2} alignItems='center'>
                         <Icon as={icon} boxSize={8} color={'black'}/>
-                        <Text ml={4} fontSize={'xl'} color={'black'}>{title}</Text>
+                        {!isSmaller&&<Text ml={4} fontSize={'xl'} color={'black'}>{title}</Text>}
                     </Flex>
                 </MenuButton>
             </Link>
